@@ -120,3 +120,50 @@
     @apply bg-background text-foreground;
   }
 }
+
+.before-line{
+  animation: first-line 5s ease-in-out;
+}
+
+/* ANIMATIONS */
+
+@keyframes first-line {
+  0% {
+    transform: translateY(0%)
+  }
+  30% {
+    transform: rotate(45deg) translateY(-1.5rem);
+  }
+  50% {
+    transform: rotate(270deg) translateY(0.5rem);
+  }
+  100% {
+    transform: rotate(-45deg) translateY(-1.5rem);
+  }
+}
+
+@keyframes slide-in-r {
+  0% {
+    transform: translateX(-110%);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(10%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

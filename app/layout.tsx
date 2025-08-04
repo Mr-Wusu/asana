@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Asana",
+  title: "asana",
   description: "A simple, beautiful, and open-source task management app.",
 };
 
