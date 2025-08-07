@@ -7,7 +7,7 @@ With this project, I show skills in the following: Reactjs, Nextjs, TailwindCSS,
 
 First, build and paint!
 
-- break this into sections ie navbar for mobile, hero for mobile view, etc.
+- break this into sections like navbar for mobile, hero for mobile view, etc.
 
 Second, add scripting!
 
