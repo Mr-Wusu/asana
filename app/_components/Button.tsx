@@ -15,7 +15,7 @@ export default function Button(props: ButtonProps) {
     <button
       type={type}
       onClick={onClick}
-      className={cn("px-4 py-2 rounded bg-black text-white", className)}
+      className={cn("px-4 py-2 rounded cursor-pointer bg-black text-white", className)}
       disabled={disabled}
     >
       {children}
