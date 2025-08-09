@@ -2,8 +2,7 @@ import Button from "./Button";
 
 export default function Hero() {
   return (
-    <div className="h-screen pt-11 bg-amber-50">
-      <header>
+      <header className="h-screen pt-11 bg-[#f0f0f0]">
         <div className="w-full px-8 flex flex-col gap-3">
           <h1 className="text-4xl font-semibold text-[#333333] text-center">
             Where your teams and AI coordinate work together
@@ -24,10 +23,9 @@ export default function Hero() {
         <div className="px-11 mt-8">
           <video autoPlay muted loop className="rounded-lg">
             <source src="/hero-video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
         </div>
       </header>
-    </div>
+
   );
 }
