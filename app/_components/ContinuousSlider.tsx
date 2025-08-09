@@ -16,18 +16,18 @@ export default function ContinuousSlider() {
       {brands.map((brand, index) => (
         <div
           key={index}
-          className="absolute flex items-center justify-center font-bold w-60 h-full animate-slide"
+          className="absolute flex items-center justify-center font-bold w-32 h-full animate-slide" // Better size for mobile
           style={{
-            animationDelay: `${index * 3.5}s`, // Stagger each brand by 4 seconds
-            left: "100%", // Start off-screen right
+            animationDelay: `3s`, // All brands start animating together after 3s delay
+            left: `${index * 120}px`, // Spacing so 3 fit in mobile screen (~360px)
           }}
         >
           <Image
             src={brand}
             alt={`Brand ${index + 1}`}
-            width={100}
-            height={50}
-            className="h-16 object-contain"
+            width={80}
+            height={40}
+            className="h-full object-contain" // Good size for mobile viewing
           />
         </div>
       ))}
@@ -38,12 +38,14 @@ export default function ContinuousSlider() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(calc(-100vw - 256px));
+            transform: translateX(
+              calc(-100vw - 128px)
+            ); /* Updated to match w-32 (128px) */
           }
         }
 
         .animate-slide {
-          animation: slide 20s linear infinite;
+          animation: slide 15s linear infinite; /* Reduced to 15s for smoother flow */
         }
       `}</style>
     </div>
