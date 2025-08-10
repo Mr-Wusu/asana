@@ -4,7 +4,7 @@ import TrustedBy from "./_components/TrustedBy";
 
 export default function Home() {
   return (
-    <div className="mt-12 flex flex-col gap-12">
+    <div className="mt-12 flex flex-col">
      <Hero/>
      <TrustedBy />
      <MovingAcross/>

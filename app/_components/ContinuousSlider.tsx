@@ -15,7 +15,7 @@ export default function ContinuousSlider() {
   const duplicatedBrands = [...brands, ...brands];
 
   return (
-    <div className="w-full h-[10rem] overflow-hidden relative -mt-3">
+    <div className="w-full h-[10rem] overflow-hidden relative -mt-3 ">
       <div className="flex absolute h-full animate-slide">
         {duplicatedBrands.map((brand, index) => (
           <div
