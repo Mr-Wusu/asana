@@ -1,12 +1,10 @@
 import Image from "next/image";
 
-const card =  {
-    image: "/asana files/Illustration-ProjectManagement.webp",
-    headerText: "Project intake",
-    body: "Capture, prioritize, and assign requests automatically so your teams have more time to work.",
-  }
+interface UseCasesCardProps {
+  card: { image: string; headerText: string; body: string };
+}
 
-export default function UseCasesCard() {
+export default function UseCasesCard({card}: UseCasesCardProps) {
   return (
     <article className="w-fit rounded-md border border-gray-200 pl-6 py-6 pr-7 flex flex-col gap-3 hover:bg-gray-50 transition-all duration-200">
       <div className="relative h-24 w-24">

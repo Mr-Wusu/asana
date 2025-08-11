@@ -5,7 +5,7 @@ With this project, I show skills in the following: Reactjs, Nextjs, TailwindCSS,
 
 ## Getting Started
 
-First, build and paint!
+First, build and paint! Mobile First!
 
 - break this into sections like navbar for mobile, hero for mobile view, etc.
 
@@ -18,5 +18,3 @@ Third, deploy on vercel.
 Fourth, add more features!
 
 Reminder: Include links both to this work and the earlier one, in this file!
-
-

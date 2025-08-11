@@ -1,4 +1,5 @@
-import UseCasesCard from "./UseCasesCard";
+import UseCases from "./UseCases";
+
 
 export default function MovingAcross() {
   return (
@@ -7,7 +8,7 @@ export default function MovingAcross() {
         See how Asana keeps work moving across use cases
       </h1>
       <div className="pl-4.5">
-        <UseCasesCard />
+        <UseCases/>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-export const accrossContainer = [
+const acrossContainer = [
   {
     image: "/asana files/Illustration-ReportingTiles.webp",
     headerText: "Campaign management",
@@ -40,3 +40,5 @@ export const accrossContainer = [
     body: "Standardize onboarding to help new employees make an impact quickly.",
   },
 ];
+
+export default acrossContainer;
