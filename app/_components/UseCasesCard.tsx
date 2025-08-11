@@ -4,9 +4,9 @@ interface UseCasesCardProps {
   card: { image: string; headerText: string; body: string };
 }
 
-export default function UseCasesCard({card}: UseCasesCardProps) {
+export default function UseCasesCard({ card }: UseCasesCardProps) {
   return (
-    <article className="w-fit rounded-md border border-gray-200 pl-6 py-6 pr-7 flex flex-col gap-3 hover:bg-gray-50 transition-all duration-200">
+    <article className="w-full min-w-[300px] rounded-md border border-gray-200 pl-6 py-6 pr-7 flex flex-col gap-3 hover:bg-gray-50 transition-all duration-200">
       <div className="relative h-24 w-24">
         <Image src={card.image} alt={card.headerText} fill />
       </div>
@@ -19,7 +19,9 @@ export default function UseCasesCard({card}: UseCasesCardProps) {
         </div>
         <div className="flex items-center gap-2 hover:text-gray-800 transition-all duration-300 cursor-pointer">
           <p className="font-semibold">See {card.headerText.toLowerCase()}</p>
-          <p className="h-4 w-4 rounded-full bg-gray-900 text-white flex justify-center items-center text-[11px] hover:bg-gray-800">&rarr;</p>
+          <p className="h-4 w-4 rounded-full bg-gray-900 text-white flex justify-center items-center text-[11px] hover:bg-gray-800">
+            &rarr;
+          </p>
         </div>
       </div>
     </article>
