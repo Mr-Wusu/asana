@@ -2,6 +2,7 @@ import Hero from "./_components/Hero";
 import MovingAcross from "./_components/MovingAcross";
 import TrustedBy from "./_components/TrustedBy";
 import AsanaApart from "./_components/AsanaApart";
+import Connect300 from "./_components/Connect300";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <TrustedBy />
       <MovingAcross />
       <AsanaApart />
+      <Connect300 />
     </div>
   );
 }
