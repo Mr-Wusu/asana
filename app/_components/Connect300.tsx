@@ -1,3 +1,4 @@
+"use client";
 import Button from "./Button";
 import ConnectCard from "./ConnectCard";
 import brands from "@/lib/connect300";
@@ -18,25 +19,89 @@ export default function Connect300() {
         </Button>
       </header>
       <main className="flex flex-col gap-4.5">
-        <div className="flex gap-4 ">
-          {brands.map((brand) => (
-            <ConnectCard
-              key={brand.alt}
-              content={brand.image}
-              alt={brand.alt}
-            />
-          ))}
+        <div className="slide-container">
+          <div className="slide-track slide-right-to-left">
+            {brands.map((brand, index) => (
+              <ConnectCard
+                key={`${brand.alt}-1-${index}`}
+                content={brand.image}
+                alt={brand.alt}
+              />
+            ))}
+            {brands.map((brand, index) => (
+              <ConnectCard
+                key={`${brand.alt}-2-${index}`}
+                content={brand.image}
+                alt={brand.alt}
+              />
+            ))}
+          </div>
         </div>
-        <div className="flex gap-4 ">
-          {brands.reverse().map((brand) => (
-            <ConnectCard
-              key={brand.alt}
-              content={brand.image}
-              alt={brand.alt}
-            />
-          ))}
+        <div className="slide-container">
+          <div className="slide-track slide-left-to-right">
+            {brands.reverse().map((brand, index) => (
+              <ConnectCard
+                key={`${brand.alt}-reverse-1-${index}`}
+                content={brand.image}
+                alt={brand.alt}
+              />
+            ))}
+            {brands.map((brand, index) => (
+              <ConnectCard
+                key={`${brand.alt}-reverse-2-${index}`}
+                content={brand.image}
+                alt={brand.alt}
+              />
+            ))}
+          </div>
         </div>
       </main>
+
+      <style jsx>{`
+        .slide-container {
+          overflow: hidden;
+          white-space: nowrap;
+          position: relative;
+          width: 100%;
+        }
+
+        .slide-track {
+          display: flex;
+          gap: 1rem;
+          width: fit-content;
+        }
+
+        .slide-right-to-left {
+          animation: slideRightToLeft 150s linear infinite;
+        }
+
+        .slide-left-to-right {
+          animation: slideLeftToRight 150s linear infinite;
+        }
+
+        .slide-right-to-left .ConnectCard,
+        .slide-left-to-right .ConnectCard {
+          flex-shrink: 0;
+        }
+
+        @keyframes slideRightToLeft {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(calc(-50% - 0.5rem));
+          }
+        }
+
+        @keyframes slideLeftToRight {
+          from {
+            transform: translateX(calc(-50% - 0.5rem));
+          }
+          to {
+            transform: translateX(0);
+          }
+        }
+      `}</style>
     </section>
   );
 }
