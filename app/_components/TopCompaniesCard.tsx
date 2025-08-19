@@ -17,7 +17,7 @@ interface TopCompaniesCardProps {
 export default function TopCompaniesCard({ card }: TopCompaniesCardProps) {
   return (
     <main
-      className={` relative h-[39.5rem] rounded-2xl border border-gray-200 w-[92%] max-w-[calc(100%-5rem)] overflow-hidden cursor-pointer"`}
+      className={`relative h-[39.5rem] rounded-2xl border border-gray-200 overflow-hidden cursor-pointer`}
     >
       <div className="w-full h-32 grid place-content-center">
         <div className="w-28 relative h-28">

@@ -8,17 +8,18 @@ import TopCompaniesCard from "./TopCompaniesCard";
 
 export default function TopCompaniesSlide() {
   return (
-    <div className="ml-5 relative">
+    <div className="relative">
       <Swiper
-        spaceBetween={-60}
+        spaceBetween={20}
         slidesPerView={1.2}
-        centeredSlides={true} // Add this line
+        slidesOffsetBefore={15}
+        slidesOffsetAfter={20}
         className="ml-5 pb-16"
         modules={[Pagination]}
         pagination={{ clickable: true }}
       >
         {topCompanies.map((company, i) => (
-          <SwiperSlide key={`Company ${i + 1} `} className="!w-95">
+          <SwiperSlide key={`Company ${i + 1} `}>
             <TopCompaniesCard card={company} />
           </SwiperSlide>
         ))}
