@@ -3,7 +3,7 @@ import TopCompaniesSlide from "./TopCompaniesSlide";
 
 export default function TopCompanies() {
   return (
-    <section className="pt-12 pb-96 flex flex-col gap-14 overflow-hidden">
+    <section className="pt-12 pb-12 flex flex-col gap-14 overflow-hidden">
       <header className="flex-col flex gap-5 px-5.5 ">
         <h2 className="text-3xl font-semibold w-full max-w-[28.75rem] ">
           The world’s top companies trust Asana
