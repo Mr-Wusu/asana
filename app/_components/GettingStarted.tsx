@@ -22,8 +22,8 @@ export default function GettingStarted() {
     },
   ];
   return (
-    <div className="flex flex-col gap-6.5 pb-28">
-      <header className="flex-col flex gap-3 pl-5 bg-[#f0fcf3] pt-14">
+    <div className="flex flex-col gap-6.5 pb-28 bg-[#f0fcf3]">
+      <header className="flex-col flex gap-3 pl-5  pt-14">
         <h2 className="text-3xl font-semibold">Get started easily</h2>
         <p>
           Tour the platform, read a few deep dives, or kickstart your work
@@ -47,7 +47,12 @@ export default function GettingStarted() {
                 </div>
               </div>
               <div className="relative w-full h-52 rounded-md overflow-hidden">
-                <Image src={award.image} alt="One of asana's awards" fill className="absolute"/>
+                <Image
+                  src={award.image}
+                  alt="One of asana's awards"
+                  fill
+                  className="absolute"
+                />
               </div>
             </div>
           ))}

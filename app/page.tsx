@@ -5,6 +5,7 @@ import AsanaApart from "./_components/AsanaApart";
 import Connect300 from "./_components/Connect300";
 import TopCompanies from "./_components/TopCompanies";
 import GettingStarted from "./_components/GettingStarted";
+import PlatformSupport from "./_components/PlatformSupport";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Connect300 />
       <TopCompanies/>
       <GettingStarted/>
+      <PlatformSupport/>
     </div>
   );
 }
