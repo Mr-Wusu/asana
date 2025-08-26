@@ -6,6 +6,7 @@ import Connect300 from "./_components/Connect300";
 import TopCompanies from "./_components/TopCompanies";
 import GettingStarted from "./_components/GettingStarted";
 import PlatformSupport from "./_components/PlatformSupport";
+import PreFooter from "./_components/PreFooter";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <TopCompanies/>
       <GettingStarted/>
       <PlatformSupport/>
+      <PreFooter/>
     </div>
   );
 }
