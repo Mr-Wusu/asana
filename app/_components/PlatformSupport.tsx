@@ -2,7 +2,7 @@ import Button from "./Button";
 
 export default function PlatformSupport() {
   return (
-    <section className="bg-[#381400] pt-14 px-6 text-[#f0f0f0]  flex flex-col gap-12">
+    <section className="bg-[#690031] pt-14 px-6 text-[#f0f0f0]  flex flex-col gap-12">
       <header className="flex flex-col gap-3.5">
         <h2 className="text-[1.9rem] tracking-tight leading-9 font-semibold w-[80%]">
           The only platform that can support your company at any scale

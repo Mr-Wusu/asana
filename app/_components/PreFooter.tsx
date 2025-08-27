@@ -4,7 +4,7 @@ import linksArr from "@/lib/pre-footer-links";
 
 export default function PreFooter() {
   return (
-    <div className="bg-[#381400] pb-96 pt-6">
+    <div className="bg-[#690031] pb-10 pt-6">
       <div className="flex items-center pl-9 pt-2 justify-start gap-1.5 ">
         <Logo />
       </div>
