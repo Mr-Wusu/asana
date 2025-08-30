@@ -10,16 +10,16 @@ import PreFooter from "./_components/PreFooter";
 
 export default function Home() {
   return (
-    <div className="mt-12 flex flex-col">
+    <div className="mt-12 flex flex-col relative">
       <Hero />
       <TrustedBy />
       <MovingAcross />
       <AsanaApart />
       <Connect300 />
-      <TopCompanies/>
-      <GettingStarted/>
-      <PlatformSupport/>
-      <PreFooter/>
+      <TopCompanies />
+      <GettingStarted />
+      <PlatformSupport />
+      <PreFooter />
     </div>
   );
 }
