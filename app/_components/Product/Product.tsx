@@ -20,7 +20,7 @@ export default function Product() {
   }
 
   return (
-    <div className="flex flex-col gap-1 mt-2.5 border-b border-b-[#f0f0ff]">
+    <div className="flex flex-col gap-1 border-b border-b-[#f0f0ff]">
       <div
         className={`flex justify-between items-center w-screen px-6 cursor-pointer py-3  ${
           isProductOpen && "bg-[#f0f0ff]"

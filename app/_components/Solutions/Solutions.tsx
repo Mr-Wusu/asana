@@ -6,6 +6,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "@/state/store";
 import { toggleDropdown } from "@/state/menu/menuSlice";
 import CompanyType from "./CompanyType";
+import Teams from "./Teams";
+import Industries from "./Industries";
+import UseCases from "./UseCases";
 
 export default function Product() {
   const dispatch = useDispatch();
@@ -19,7 +22,7 @@ export default function Product() {
   }
 
   return (
-    <div className="flex flex-col gap-1 mt-2.5 border-b border-b-[#f0f0ff]">
+    <div className="flex flex-col gap-1 border-b border-b-[#f0f0ff]">
       <div
         className={`flex justify-between items-center w-screen px-6 cursor-pointer py-3  ${
           isSolutionsOpen && "bg-[#f0f0ff]"
@@ -32,7 +35,9 @@ export default function Product() {
       {isSolutionsOpen && (
         <div className="flex flex-col gap-4 text-[.925rem] font-semibold">
           <CompanyType />
-
+          <Teams/>
+          <Industries/>
+          <UseCases/>
         </div>
       )}
     </div>

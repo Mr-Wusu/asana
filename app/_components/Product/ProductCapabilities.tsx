@@ -13,7 +13,7 @@ import { GrUserExpert } from "react-icons/gr";
 export default function ProductCapabilities() {
   return (
     <div className="flex flex-col gap-0.5 px-3">
-      <h3 className="py-3.5 px-7 border-b tracking-wider border-b-[#f0f0ff] ">
+      <h3 className="py-3.5 px-7 border-b tracking-wider border-b-[#f0f0ff] text-sm">
         CAPABILITIES
       </h3>
       <ul className="flex flex-col gap-2 pt-1.5">

@@ -8,7 +8,8 @@ export default function HamburgherMenu() {
   const dispatch = useDispatch();
 
   function handleHamburgherClick() {
-    if (!isOpen) {
+    if (isOpen) {
+      // When closing, also close any open dropdowns
       dispatch(toggleDropdown(undefined));
     }
     dispatch(toggleMenu());
@@ -16,7 +17,7 @@ export default function HamburgherMenu() {
 
   return (
     <div
-      className="w-8 h-8 relative cursor-pointer"
+      className="w-8 h-8 relative cursor-pointer z-50"
       onClick={handleHamburgherClick}
       aria-label="Toggle menu"
       aria-expanded={isOpen}

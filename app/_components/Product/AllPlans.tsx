@@ -6,7 +6,7 @@ import { BiShoppingBag } from "react-icons/bi";
 export default function AllPlans() {
   return (
     <div className="flex flex-col gap-0.5 px-3 bg-[#f1f1fd] pb-3.5">
-      <h3 className="py-3.5 px-7 tracking-wider ">ALL PLANS</h3>
+      <h3 className="py-3.5 px-7 tracking-wider text-sm">ALL PLANS</h3>
       <div className="h-[1px] w-5/6 mx-auto bg-[#dfdff0]" />
       <ul className="flex flex-col gap-2 pt-1.5">
         <Link

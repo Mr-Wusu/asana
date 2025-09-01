@@ -1,50 +1,58 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-export type DropDown =
+type DropdownType =
   | "product"
   | "solutions"
   | "resources"
   | "pricing"
   | undefined;
 
-const initialState: {
+interface MenuState {
   isOpen: boolean;
   dropDown: {
-    product: DropDown;
-    solutions: DropDown;
-    resources: DropDown;
-    pricing: DropDown;
+    product?: string;
+    solutions?: string;
+    resources?: string;
+    pricing?: string;
   };
-} = {
+}
+
+const initialState: MenuState = {
   isOpen: false,
-  dropDown: {
-    product: undefined,
-    solutions: undefined,
-    resources: undefined,
-    pricing: undefined,
-  },
+  dropDown: {},
 };
 
 const menuSlice = createSlice({
   name: "menu",
   initialState,
   reducers: {
-    toggleMenu(state) {
+    toggleMenu: (state) => {
       state.isOpen = !state.isOpen;
+      // Close all dropdowns when menu is closed
+      if (!state.isOpen) {
+        state.dropDown = {};
+      }
     },
-    toggleDropdown(state, action: PayloadAction<DropDown>) {
-      if (action.payload === "product")
-        state.dropDown = { ...initialState.dropDown, product: "product" };
-      if (action.payload === "solutions")
-        state.dropDown = { ...initialState.dropDown, solutions: "solutions" };
-      if (action.payload === "resources")
-        state.dropDown = { ...initialState.dropDown, resources: "resources" };
-      if (action.payload === "pricing")
-        state.dropDown = { ...initialState.dropDown, pricing: "pricing" };
-      if (action.payload === undefined) state.dropDown = initialState.dropDown;
+    closeMenu: (state) => {
+      state.isOpen = false;
+      state.dropDown = {};
+    },
+    toggleDropdown: (state, action: PayloadAction<DropdownType>) => {
+      const dropdownType = action.payload;
+
+      if (dropdownType === undefined) {
+        // Close all dropdowns
+        state.dropDown = {};
+      } else {
+        // Close all dropdowns first
+        state.dropDown = {};
+
+        // Then open the specified dropdown
+        state.dropDown[dropdownType] = dropdownType;
+      }
     },
   },
 });
 
+export const { toggleMenu, closeMenu, toggleDropdown } = menuSlice.actions;
 export default menuSlice.reducer;
-export const { toggleMenu, toggleDropdown } = menuSlice.actions;

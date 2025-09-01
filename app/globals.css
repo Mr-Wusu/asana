@@ -1,6 +1,78 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Add this to your globals.css */
+
+/* Smooth transitions for modal */
+.modal-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.modal-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.modal-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modal-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+/* Prevent scrolling on body when modal is open */
+body.modal-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Custom scrollbar for modal content */
+.modal-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 2px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Dropdown animations */
+.dropdown-enter {
+  max-height: 0;
+  opacity: 0;
+}
+
+.dropdown-enter-active {
+  max-height: 800px;
+  opacity: 1;
+  transition: max-height 300ms ease-in-out, opacity 200ms ease-in-out;
+}
+
+.dropdown-exit {
+  max-height: 800px;
+  opacity: 1;
+}
+
+.dropdown-exit-active {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 300ms ease-in-out, opacity 200ms ease-in-out;
+}
+
 .before-line {
   animation: first-line 5s ease-in-out;
 }
