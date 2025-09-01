@@ -5,8 +5,7 @@ import { FaAngleDown } from "react-icons/fa6";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "@/state/store";
 import { toggleDropdown } from "@/state/menu/menuSlice";
-
-
+import CompanyType from "./CompanyType";
 
 export default function Product() {
   const dispatch = useDispatch();
@@ -32,7 +31,7 @@ export default function Product() {
       </div>
       {isSolutionsOpen && (
         <div className="flex flex-col gap-4 text-[.925rem] font-semibold">
-          Solutions
+          <CompanyType />
         </div>
       )}
     </div>
