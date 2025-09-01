@@ -15,12 +15,11 @@ export default function CompanyType() {
           Small business
         </Link>
 
-        <Link className="py-3 px-7 hover:bg-[#f4f9ff]" href="/industry/nonprofit">
+        <Link
+          className="py-3 px-7 hover:bg-[#f4f9ff]"
+          href="/industry/nonprofit"
+        >
           Non profit
-        </Link>
-
-        <Link className="py-3 px-7 hover:bg-[#f4f9ff] " href="/whats-new">
-          Latest feature release
         </Link>
       </ul>
     </div>
