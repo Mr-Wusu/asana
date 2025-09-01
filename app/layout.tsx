@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./_components/Navbar";
-import Footer from "./_components/Footer";
+import Navbar from "./_components/HomePage/Navbar";
+import Footer from "./_components/HomePage/Footer";
 import ReduxProvider from "@/contexts/reduxProvider";
-import Modal from "./_components/Modal";
+import Modal from "./_components/HomePage/Modal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
