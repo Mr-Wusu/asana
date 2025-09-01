@@ -1,6 +1,6 @@
 "use client";
 import { RootState } from "@/state/store";
-import { toggleMenu } from "@/state/menu/menuSlice";
+import { toggleMenu, toggleDropdown } from "@/state/menu/menuSlice";
 import { useSelector, useDispatch } from "react-redux";
 
 export default function HamburgherMenu() {
@@ -8,6 +8,9 @@ export default function HamburgherMenu() {
   const dispatch = useDispatch();
 
   function handleHamburgherClick() {
+    if (!isOpen) {
+      dispatch(toggleDropdown(undefined));
+    }
     dispatch(toggleMenu());
   }
 
